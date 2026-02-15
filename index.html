@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love You Animation</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 60px;
+        color: white;
+        letter-spacing: 4px;
+        animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    /* Glowing text animation */
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 10px #fff,
+                         0 0 20px #ff4da6,
+                         0 0 30px #ff4da6;
+        }
+        to {
+            text-shadow: 0 0 20px #fff,
+                         0 0 30px #ff1a75,
+                         0 0 40px #ff1a75;
+        }
+    }
+
+    /* GIF styling */
+    .gif {
+        width: 220px;
+        margin: 20px 0;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(255,255,255,0.8);
+    }
+
+    /* Heart */
+    .heart {
+        position: relative;
+        width: 100px;
+        height: 90px;
+        margin: 20px auto;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .heart:before,
+    .heart:after {
+        content: "";
+        position: absolute;
+        left: 50px;
+        top: 0;
+        width: 50px;
+        height: 80px;
+        background: red;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+
+    .heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+
+    /* Floating animation */
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>I Love You Mommy! ❤️</h1>
+
+        <!-- GIF in the middle -->
+        <img src="200.gif" class="gif" alt="Love GIF">
+
+        <div class="heart"></div>
+    </div>
+</body>
+</html>
